@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TheWalkingDeadApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ListFrag">ListFrag</string>
+    <string name="SecFrag">SecFrag</string>
+
 </resources>
