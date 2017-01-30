@@ -10,6 +10,10 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(this, twdData.Temporadas[0], Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, twdData.TemporadasContent[0], Toast.LENGTH_SHORT).show();
+
         Toast.makeText(this, "OnCreate", Toast.LENGTH_SHORT).show();
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState != null) {
