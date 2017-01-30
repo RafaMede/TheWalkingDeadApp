@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -47,6 +48,9 @@ public class ListFrag extends ListFragment {
             Toast.makeText(getActivity().getBaseContext(), "Clicked Landscape." + twdData.Temporadas[position],
                     Toast.LENGTH_SHORT).show();
         }
+
+        TextView SecFrag = (TextView) getActivity().findViewById(R.id.SecFrag);
+        SecFrag.setText(twdData.TemporadasContent[position]);
     }
 
 }
