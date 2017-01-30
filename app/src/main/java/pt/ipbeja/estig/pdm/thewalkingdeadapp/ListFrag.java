@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 
 /**
@@ -34,6 +36,17 @@ public class ListFrag extends ListFragment {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
 
+        if (getActivity().findViewById(R.id.activity_main) != null){
+            Toast.makeText(getActivity().getBaseContext(), "Clicked Portrait." + twdData.Temporadas[position],
+                    Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(getActivity().getBaseContext(), "Clicked Landscape." + twdData.Temporadas[position],
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
