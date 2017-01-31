@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class SecFrag extends Fragment {
 
+    int currentPosition;
 
     public SecFrag() {
         // Required empty public constructor
@@ -25,5 +27,15 @@ public class SecFrag extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sec, container, false);
     }
+
+    @Override public void onStart() {
+        super.onStart();
+        Bundle args = getArguments();
+        if (args != null) {
+            currentPosition = args.getInt("position");
+            TextView article = (TextView) getActivity().findViewById(R.id.SecFrag);
+            article.setText(twdData.TemporadasContent[currentPosition]);
+            }
+        }
 
 }
