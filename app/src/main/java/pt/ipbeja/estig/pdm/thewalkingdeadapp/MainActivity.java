@@ -65,14 +65,13 @@ public class MainActivity extends AppCompatActivity implements
     public void Initialize(){
 
         DBHelper db = new DBHelper(this);
-        //db.insertTemporadas("Temporada1", "A primeira temporada tem 6 episódios.", R.drawable.temporada1, "https://goo.gl/maps/MeUV5yRDjQ22", "tel: 968526910");
-        //db.insertTemporadas("Temporada2", "A primeira temporada tem 13 episódios.", R.drawable.temporada2, "https://goo.gl/maps/yKPHE2PxZj72", "tel: 969762806");
-        //db.insertTemporadas("Temporada3", "A primeira temporada tem 16 episódios.", R.drawable.temporada3, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
-        //db.insertTemporadas("Temporada4", "A primeira temporada tem 16 episódios.", R.drawable.temporada4, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
-        //db.insertTemporadas("Temporada5", "A primeira temporada tem 16 episódios.", R.drawable.temporada5, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
-        //db.insertTemporadas("Temporada6", "A primeira temporada tem 16 episódios.", R.drawable.temporada6, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
-        //db.insertTemporadas("Temporada7", "A primeira temporada tem 16 episódios.", R.drawable.temporada7, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
-
+        //db.insertTemporadas("Temporada1", R.drawable.temporada1, "A 1ª Temporada de The Walking Dead começou a ser transmitida a 31 de Outubro de 2010 e foi concluida a 5 de Dezembro de 2010, consistiu em 6 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada2", R.drawable.temporada2, "A 2ª Temporada de The Walking Dead começou a ser transmitida a 16 de Outubro de 2011 e foi concluida a 18 de Março de 2012, consistiu em 13 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada3", R.drawable.temporada3, "A 3ª Temporada de The Walking Dead começou a ser transmitida a 14 de Outubro de 2012 e foi concluida a 31 de Março de 2013, consistiu em 16 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada4", R.drawable.temporada4, "A 4ª Temporada de The Walking Dead começou a ser transmitida a 13 de Outubro de 2013 e foi concluida a 30 de Março de 2014, consistiu em 16 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada5", R.drawable.temporada5, "A 5ª Temporada de The Walking Dead começou a ser transmitida a 12 de Outubro de 2014 e foi concluida a 29 de Março de 2015, consistiu em 16 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada6", R.drawable.temporada6, "A 6ª Temporada de The Walking Dead começou a ser transmitida a 11 de Outubro de 2015 e foi concluida a 3 de Abril de 2016, consistiu em 16 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada7", R.drawable.temporada7, "A 7ª Temporada de The Walking Dead começou a ser transmitida a 23 de Outubro de 2016 e vai regressar a 12 de Abril de 2017, vai consistir em 16 episódios.", "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
 
         twdData.ListFrag = db.getAllNames();
         twdData.ListDescription = db.getAllDescription();
