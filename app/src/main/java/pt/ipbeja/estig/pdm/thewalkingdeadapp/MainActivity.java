@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity implements
     public void Initialize(){
 
         DBHelper db = new DBHelper(this);
-        //db.insertAnimals("Animal1", "Cão1", R.drawable.animal1, "https://goo.gl/maps/MeUV5yRDjQ22", "tel: 968526910");
-        //db.insertAnimals("Animal2", "Gato2", R.drawable.animal2, "https://goo.gl/maps/yKPHE2PxZj72", "tel: 969762806");
+        //db.insertTemporadas("Temporada1", "A primeira temporada tem 6 episódios.", R.drawable.temporada1, "https://goo.gl/maps/MeUV5yRDjQ22", "tel: 968526910");
+        //db.insertTemporadas("Temporada2", "A primeira temporada tem 13 episódios.", R.drawable.temporada2, "https://goo.gl/maps/yKPHE2PxZj72", "tel: 969762806");
 
         twdData.ListFrag = db.getAllNames();
         twdData.ListDescription = db.getAllDescription();
@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(callIntent);
     }
 
-    /*public void btnGPS_onClick(View view) {
-        Intent mapGoogle = new Intent(MainActivity.this, GPSCoordinates.class);
+    public void btnGPS_onClick(View view) {
+        Intent mapGoogle = new Intent(MainActivity.this, GPSCordenadas.class);
         mapGoogle.putExtra("gps", twdData.ListGPS.get(pos));
         startActivity(mapGoogle);
-    }*/
+    }
 }

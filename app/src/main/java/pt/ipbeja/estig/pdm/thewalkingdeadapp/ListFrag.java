@@ -52,7 +52,7 @@ public class ListFrag extends ListFragment {
             mCallback = (OnListSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
+                    + " must implement OnListSelectedListener");
         }
     }
 }
