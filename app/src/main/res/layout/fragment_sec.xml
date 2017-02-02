@@ -1,44 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="pt.ipbeja.estig.pdm.thewalkingdeadapp.SecFrag">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/SecFrag"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/SecFrag"/>
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:id="@+id/imageTemporada" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/SecFrag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SecFrag" />
+
+            <ImageView
+                android:id="@+id/imageTemporada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
 
-        <Button
-            android:text="Chamada"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btnCall"
-            android:onClick="btnCall_onClick" />
+                <Button
+                    android:id="@+id/btnCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnCall_onClick"
+                    android:text="Chamada" />
 
-        <Button
-            android:text="Localização"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btnGPS"
-            android:onClick="btnGPS_onClick" />
+                <Button
+                    android:id="@+id/btnGPS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnGPS_onClick"
+                    android:text="Localização" />
 
-    </LinearLayout>
+            </LinearLayout>
 
-</FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

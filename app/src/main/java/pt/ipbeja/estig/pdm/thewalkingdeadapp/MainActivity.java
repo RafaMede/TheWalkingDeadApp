@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements
             ContentFrag.updateArticleView(position);
         }
         pos = position;
-        }
+    }
 
 
     @Override
@@ -67,6 +67,12 @@ public class MainActivity extends AppCompatActivity implements
         DBHelper db = new DBHelper(this);
         //db.insertTemporadas("Temporada1", "A primeira temporada tem 6 episódios.", R.drawable.temporada1, "https://goo.gl/maps/MeUV5yRDjQ22", "tel: 968526910");
         //db.insertTemporadas("Temporada2", "A primeira temporada tem 13 episódios.", R.drawable.temporada2, "https://goo.gl/maps/yKPHE2PxZj72", "tel: 969762806");
+        //db.insertTemporadas("Temporada3", "A primeira temporada tem 16 episódios.", R.drawable.temporada3, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada4", "A primeira temporada tem 16 episódios.", R.drawable.temporada4, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada5", "A primeira temporada tem 16 episódios.", R.drawable.temporada5, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada6", "A primeira temporada tem 16 episódios.", R.drawable.temporada6, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+        //db.insertTemporadas("Temporada7", "A primeira temporada tem 16 episódios.", R.drawable.temporada7, "https://goo.gl/maps/L9SPn94xke52", "tel: 926758430");
+
 
         twdData.ListFrag = db.getAllNames();
         twdData.ListDescription = db.getAllDescription();
@@ -89,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     public void btnGPS_onClick(View view) {
-        Intent mapGoogle = new Intent(MainActivity.this, GPSCordenadas.class);
-        mapGoogle.putExtra("gps", twdData.ListGPS.get(pos));
-        startActivity(mapGoogle);
+        Uri gps = Uri.parse(twdData.ListGPS.get(pos));
+        Intent callGPS = new Intent(Intent.ACTION_VIEW, gps);
+        startActivity(callGPS);
     }
 }
